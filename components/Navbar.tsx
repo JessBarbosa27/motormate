@@ -41,6 +41,9 @@ const Navbar: React.FC<NavbarProps> = ({
           <li>
             <Link href="/contact">Contact</Link>
           </li>
+          <li>
+            <Link href="/admin">Admin</Link>
+          </li>
         </ul>
       </div>
     </nav>
