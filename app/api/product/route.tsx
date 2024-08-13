@@ -1,9 +1,9 @@
-import type { NextApiRequest, NextApiResponse } from "next";
+import { NextResponse } from "next/server";
 import path from "path";
 import fs from "fs";
 import { Product } from "@/lib/models/Product";
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export async function GET() {
   const productPhotosDirectory = path.join(
     process.cwd(),
     "public/productPhotos"
@@ -18,5 +18,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return new Product(index + 1, name, price, imageUrl);
   });
 
-  res.status(200).json(products);
+  return NextResponse.json(products);
 }

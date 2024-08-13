@@ -32,7 +32,7 @@ const Showcase: React.FC = () => {
   if (error) return <p>{error}</p>;
 
   return (
-    <section className="py-16 bg-gray-200">
+    <section className="py-16 bg-black">
       <div className="container mx-auto text-center">
         <h2 className="text-3xl font-bold mb-8">Product Showcase</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
